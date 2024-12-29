@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c6eff220-804e-4f31-931e-06bd340a961a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BD5.3_CW/database.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.3_CW/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.3_CW/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.3_CW/models/track.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.4_CW/database.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.4_CW/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.4_CW/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.4_CW/models/like.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.4_CW/models/track.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.4_CW/models/user.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.5_CW/database.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.5_CW/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.5_CW/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.5_CW/models/like.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.5_CW/models/track.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5.5_CW/models/user.model.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2qnuRxxEAP9YJqAGmoOJXxd8XUy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/almin/OneDrive/Desktop/invact_excerices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6eff220-804e-4f31-931e-06bd340a961a" name="Changes" comment="" />
+      <created>1735310655975</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735310655975</updated>
+      <workItem from="1735310657130" duration="25779000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/BD5.4_CW/index.js</url>
+          <line>165</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
