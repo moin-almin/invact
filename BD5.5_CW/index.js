@@ -2,6 +2,8 @@ const express = require('express');
 let {track} = require('./models/track.model');
 let {sequelize} = require('./lib/index');
 const {user} = require("./models/user.model");
+const {like} = require("./models/like.model");
+let { Op } = require("@sequelize/core");
 const app = express();
 
 const PORT = 8080;
@@ -223,5 +225,78 @@ app.post('/users/update/:id', async (req, res) => {
     } catch (error) {
         res.status(500).json({message: 'Error while updating user with id ' + id, error: error.message });
     }
+})
+
+async function likeTrack(data) {
+    let newLike = await like.create({
+        userId: data.userId,
+        trackId: data.trackId,
+    });
+
+    return {message: 'Track Liked successfully.', newLike };
+};
+
+app.get('/users/:id/like', async (req, res) => {
+    try {
+        let userId = parseInt(req.params.id);
+        let trackId = parseInt(req.query.trackId);
+
+        let response = await likeTrack({userId, trackId});
+
+        return res.status(200).json(response);
+
+    } catch (e) {
+        return res.status(404).json({error: e.message});
+    }
+})
+
+async function dislikeTrack(data) {
+    let count = await like.destroy({ where: { userId: data.userId, trackId: data.trackId }});
+    if (count === 0) return {};
+
+    return {message: 'Disliked track.' };
+}
+app.get('users/:id/dislike', async (req, res) => {
+    try {
+        let userId = parseInt(req.params.id);
+        let trackId = parseInt(req.query.trackId);
+        let response = await dislikeTrack({userId, trackId});
+
+        if (!response.message) {
+            res.status(404).json({message: "This track is not in your liked list."});
+        }
+
+        return res.status(200).json(response);
+    } catch (e) {
+        res.status(500).json({message: 'Error while disliking track.', error: e.message });
+    }
+})
+
+async function getAllLikedTracks(userId) {
+    let trackIds = await like.findAll({ where: { userId },
+    attributes: ["trackId"]}) ;
+
+    let trackRecords = [];
+
+    for (let i = 0; i < trackIds.length; i++) {
+        trackRecords.push(trackIds[i].trackId);
+    }
+
+    let likedTracks = await track.findAll({
+        where: {}
+    })
+    return { trackIds };
+}
+app.get('users/:id/liked', async (req, res) => {
+    try {
+        let userId = parseInt(req.params.id);
+
+        let response = await getAllLikedTracks(userId);
+
+        return res.status(200).json(result);
+    } catch (e) {
+        res.status(500).json({message: 'Error while getting all likes.', error: e.message });
+    }
+
 })
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

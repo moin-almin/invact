@@ -4,23 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6eff220-804e-4f31-931e-06bd340a961a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BD5.3_CW/database.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.3_CW/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.3_CW/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.3_CW/models/track.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.4_CW/database.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.4_CW/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.4_CW/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.4_CW/models/like.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.4_CW/models/track.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.4_CW/models/user.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.5_CW/database.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.5_CW/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.5_CW/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.5_CW/models/like.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.5_CW/models/track.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5.5_CW/models/user.model.js" afterDir="false" />
+    <list default="true" id="c6eff220-804e-4f31-931e-06bd340a961a" name="Changes" comment="BD5 - Associative Mapping CW">
+      <change afterPath="$PROJECT_DIR$/BD5_Assignment/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5_Assignment/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/department.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/employee.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/like.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/role.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD6.1_CW/book.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD6.1_CW/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD6.1_CW/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD6.1_CW/tests/books.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD5.5_CW/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/BD5.5_CW/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD5.5_CW/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/BD5.5_CW/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD5.5_CW/models/like.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/BD5.5_CW/models/like.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +31,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;moin-almin&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/moin-almin/invact.git&quot;,
+    &quot;accountId&quot;: &quot;056de277-8160-43e6-8e2c-694385f023a7&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2qnuRxxEAP9YJqAGmoOJXxd8XUy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -44,22 +57,62 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/almin/OneDrive/Desktop/invact_excerices",
+    "last_opened_file_path": "C:/Users/almin/OneDrive/Desktop/invact_excerices/BD5_Assignment/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.test.executor": "Run",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices\BD5_Assignment\models" />
       <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.test">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -76,8 +129,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735310655975</updated>
-      <workItem from="1735310657130" duration="25779000" />
+      <workItem from="1735310657130" duration="27076000" />
+      <workItem from="1735483763934" duration="23398000" />
     </task>
+    <task id="LOCAL-00001" summary="BD5 - Associative Mapping CW">
+      <option name="closed" value="true" />
+      <created>1735475947794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735475947794</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,13 +157,16 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="BD5 - Associative Mapping CW" />
+    <option name="LAST_COMMIT_MESSAGE" value="BD5 - Associative Mapping CW" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/BD5.4_CW/index.js</url>
           <line>165</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
