@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6eff220-804e-4f31-931e-06bd340a961a" name="Changes" comment="BD5 - Associative Mapping CW">
-      <change afterPath="$PROJECT_DIR$/BD5_Assignment/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5_Assignment/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/department.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/employee.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/like.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD5_Assignment/models/role.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD6.1_CW/book.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD6.1_CW/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD6.1_CW/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BD6.1_CW/tests/books.test.js" afterDir="false" />
+    <list default="true" id="c6eff220-804e-4f31-931e-06bd340a961a" name="Changes" comment="BD6.2">
+      <change afterPath="$PROJECT_DIR$/BD6.2_CW/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD6.2_CW/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD6.2_CW/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD6.2_CW/tests/app.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD5.5_CW/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/BD5.5_CW/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD5.5_CW/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/BD5.5_CW/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD5.5_CW/models/like.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/BD5.5_CW/models/like.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +50,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/almin/OneDrive/Desktop/invact_excerices/BD5_Assignment/models",
+    "last_opened_file_path": "C:/Users/almin/OneDrive/Desktop/invact_excerices",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,8 +69,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices\BD5_Assignment\models" />
       <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices" />
+      <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices\BD5_Assignment\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\almin\OneDrive\Desktop\invact_excerices" />
@@ -130,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735310655975</updated>
       <workItem from="1735310657130" duration="27076000" />
-      <workItem from="1735483763934" duration="23398000" />
+      <workItem from="1735483763934" duration="29765000" />
     </task>
     <task id="LOCAL-00001" summary="BD5 - Associative Mapping CW">
       <option name="closed" value="true" />
@@ -140,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735475947794</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="BD6.1">
+      <option name="closed" value="true" />
+      <created>1735923198767</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735923198767</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +157,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BD5 - Associative Mapping CW" />
-    <option name="LAST_COMMIT_MESSAGE" value="BD5 - Associative Mapping CW" />
+    <MESSAGE value="BD6.1" />
+    <MESSAGE value="BD6.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="BD6.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
