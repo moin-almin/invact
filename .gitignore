@@ -1,3 +1,4 @@
 node_modules
 *.sqlite
-.idea
+.idea/
+*.env
