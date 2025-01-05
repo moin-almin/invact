@@ -1,9 +1,8 @@
-const {DataTypes, sequelize} = require("../lib/");
+const { DataTypes, sequelize} = require('../lib');
 
-let employee = sequelize.define("employee", {
-    username: {
+const employee = sequelize.define('employee', {
+    name: {
         type: DataTypes.STRING,
-        unique: true,
         allowNull: false,
     },
     email: {
@@ -13,7 +12,9 @@ let employee = sequelize.define("employee", {
         validate: {
             isEmail: true
         }
-    },
+    }
 });
 
-module.exports = { employee };
+module.exports = {
+    employee,
+}

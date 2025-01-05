@@ -22,4 +22,4 @@ let like = sequelize.define("like", {
 user.belongsToMany(track, {through: "like"});
 track.belongsToMany(user, {through: "like"});
 
-model.exports = { like };
+module.exports = { like };
