@@ -170,6 +170,164 @@ app.get('/employees/department/:departmentId', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: 'Error while getting employees.', error: error.message });
     }
+});
+
+// Get employees by roleId function
+async function getEmployeesByRoleId(roleId) {
+    return await employeeRole.findAll({where: { roleId }});
+}
+
+// Endpoint: Get All Employees by Role
+app.get('/employees/role/:roleId', async (req, res) => {
+    try {
+        let roleId = parseInt(req.params.roleId);
+        let employees = await getEmployeesByRoleId(roleId);
+        if (employees.length === 0) {
+            return res.status(404).json({message: "No employee found with role id: " + roleId});
+        }
+        let employeesData = [];
+        for (let employee of employees) {
+            let employeeData = await getEmployeeById(employee.employeeId);
+            let employeeDetails = await getEmployeeDetails(employeeData);
+            employeesData.push(employeeDetails);
+        }
+        return res.status(200).json({employees: employeesData});
+    } catch (error) {
+        res.status(500).json({ message: 'Error while getting employees.', error: error.message });
+    }
+});
+
+// Function Get Employees Sorted by Name
+async function getEmployeesSortedByName(order) {
+    return await employee.findAll({order: [['name', order]]});
+}
+
+// Endpoint: Get Employees Sorted by Name
+app.get('/employees/sort-by-name', async (req, res) => {
+    try {
+        let order = req.query.order;
+        let employees = await getEmployeesSortedByName(order);
+        if (employees.length === 0) {
+            return res.status(404).json({message: "No employee found"});
+        }
+        let employeesData = [];
+        for (let employee of employees) {
+            employeesData.push(await getEmployeeDetails(employee));
+        }
+        return res.status(200).json({employees: employeesData});
+    } catch (error) {
+        res.status(500).json({ message: 'Error while getting employees.', error: error.message });
+    }
+});
+
+// Function to add new employee
+async function addEmployee(employeeData) {
+    let newEmployee = await employee.create({
+        name: employeeData.name,
+        email: employeeData.email,
+    })
+
+    await employeeDepartment.create({
+        employeeId: newEmployee.id,
+        departmentId: employeeData.departmentId,
+    })
+
+    await employeeRole.create({
+        employeeId: newEmployee.id,
+        roleId: employeeData.roleId,
+    })
+
+    return newEmployee;
+}
+
+// Endpoint: Add a New Employee
+app.post('/employees/new', async (req, res) => {
+    try {
+        let employeeData = req.body;
+        let newEmployee = await addEmployee(employeeData);
+        let newEmployeeData = await getEmployeeDetails(newEmployee);
+        return res.status(201).json(newEmployeeData);
+    } catch (error) {
+        res.status(500).json({ message: 'Error while adding new employee.', error: error.message });
+    }
+});
+
+// Function To Update Employee Details
+async function updateEmployeeDetails(employeeId, updatedInfo) {
+    let employeeDetails = await employee.findOne({ where: {id: employeeId}});
+    if (employeeDetails === null) {
+        return { message: "No employee found with ID: " + employeeId }
+    }
+
+    if (updatedInfo.name || updatedInfo.email) {
+        employeeDetails.set(updatedInfo);
+        await employeeDetails.save();
+    }
+
+    if (updatedInfo.roleId) {
+        let roleDetails = await role.findOne({ where: {id: updatedInfo.roleId}});
+        if (roleDetails === null) {
+            return { message: "No role found with ID: " + updatedInfo.roleId }
+        }
+        await employeeRole.destroy({
+            where: {employeeId},
+        });
+        await employeeRole.create({
+            employeeId,
+            roleId: updatedInfo.roleId,
+        });
+    }
+
+    if (updatedInfo.departmentId) {
+        let departmentDetails = await department.findOne({ where: {id: updatedInfo.departmentId}});
+        if (departmentDetails === null) {
+            return { message: "No department found with ID: " + updatedInfo.departmentId }
+        }
+        await employeeDepartment.destroy({
+            where: {employeeId},
+        });
+        await employeeDepartment.create({
+            employeeId,
+            departmentId: updatedInfo.departmentId,
+        });
+    }
+
+    let updatedEmployee = await employee.findOne({ where: {id: employeeId}});
+    return await getEmployeeDetails(updatedEmployee);
+}
+
+// Endpoint: Update Employee Details
+app.post('/employees/update/:id', async (req, res) => {
+    let employeeId = parseInt(req.params.id);
+    let updatedInfo = req.body;
+
+    let response = await updateEmployeeDetails(employeeId, updatedInfo);
+    return res.status(200).json(response);
+})
+
+// Function to delete an employee
+async function deleteEmployee(employeeId) {
+    let deletedEmployee = await employee.destroy({where: {id: employeeId}});
+    if (deletedEmployee === 0) return {}
+
+    await employeeDepartment.destroy({where: {employeeId: employeeId}});
+    await employeeRole.destroy({where: {employeeId: employeeId}});
+
+    return {message: 'Employee Deleted' };
+}
+
+// Endpoint: Delete an Employee
+app.post('/employees/delete', async (req, res) => {
+    try {
+        let employeeId = parseInt(req.body.id);
+        let response = await deleteEmployee(employeeId);
+        if (!response.message) {
+            return res.status(404).json({message: "Employee does not exist."});
+        }
+        return res.status(201).json({message: 'Employee with ID ' + employeeId + ' has been deleted.'})
+    } catch (error) {
+        res.status(500).json({ message: 'Error while deleting', error: error.message });
+    }
 })
 
 app.listen(3000, () => { console.log('Server running on port 3000')});
