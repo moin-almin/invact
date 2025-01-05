@@ -14,11 +14,11 @@ const users = [
         location: "Jharkhand"
     },
     {
-        id: 1,
-        username: "moinalmin",
-        name: "Moin Almin",
-        repoCount: 42,
-        location: "Jharkhand"
+        id: 2,
+        username: "testuser",
+        name: "Test user",
+        repoCount: 28,
+        location: "Delhi"
     }
 ];
 
@@ -33,7 +33,6 @@ app.get('/users/:id', (req, res) => {
     } else {
         res.status(404).json({ message: "User Not Found" });
     }
-    
 })
 
 app.listen(3000, () => console.log("Listening on 3000"));
