@@ -1,6 +1,7 @@
 const {
     user: userModel
 } = require('../models');
+const {validateUser} = require('../validations');
 
 async function doesUserExist(email) {
     let user = await userModel.findOne({ where: { email } });
@@ -8,25 +9,13 @@ async function doesUserExist(email) {
     return true;
 }
 
-function validateUser(user) {
-    if (!user.username || typeof user.username !== 'string') {
-        return "username is required and must be a string.";
-    }
-
-    if (!user.email || typeof user.email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user.email)) {
-        return "Email is required, must be a string, and must be a valid email address.";
-    }
-
-    return null;
-}
-
 const createNewUser = async (req, res) => {
+    const userData = req.body;
+
+    let errors = validateUser(userData);
+    if (errors.length > 0) return res.status(400).json({ errors });
+
     try {
-        const userData = req.body;
-
-        let error = validateUser(userData);
-        if (error) return res.status(400).send(error);
-
         if (await doesUserExist(userData.email)) {
             return res.status(400).json({ message: 'Email already exists' });
         }
