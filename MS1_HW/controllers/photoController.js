@@ -1,4 +1,9 @@
 const axios = require('axios');
+const { validatePhoto, validateTags} = require('../validations');
+const {
+    photo: photoModel,
+    tag: tagModel,
+} = require('../models');
 
 const axiosInstance = axios.create({
     baseURL: process.env.MICROSERVICE_BASE_URL,
@@ -36,10 +41,42 @@ const searchImages = async (req, res) => {
         }));
 
         res.json({ photos });
-    } catch {
+    } catch (error) {
         console.log(error);
-        res.status(500).json({ error: "Failed to fetch images" });
+        res.status(500).json({ error: "Failed to fetch images." });
     }
 }
 
-module.exports = { searchImages };
+const savePhoto = async (req, res) => {
+    const photoData = req.body;
+    const errors = validatePhoto(photoData);
+    if (errors.length > 0) return res.status(400).json({ errors });
+
+    try {
+        const newPhoto = await photoModel.create({
+            imageUrl: photoData.imageUrl,
+            description: photoData.description,
+            alt_description: photoData.alt_description,
+            userId: photoData.userId,
+        });
+
+        const tagErrors = await validateTags(photoData.tags, newPhoto.id);
+        if (tagErrors.length > 0) return res.status(400).json({ tagErrors });
+
+        if (photoData.tags && photoData.tags.length > 0) {
+            for (const tag of photoData.tags) {
+                const savedTag = await tagModel.create({
+                    name: tag,
+                    photoId: newPhoto.id,
+                })
+            }
+        }
+
+        res.status(200).json({message: "Photo saved successfully"});
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Failed to save photo." });
+    }
+}
+
+module.exports = { searchImages, savePhoto };
